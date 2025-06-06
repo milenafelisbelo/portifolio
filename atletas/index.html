@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atletas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Atletas</h1>
+        <nav>
+            <button onclick="cadastro.classList.remove('oculta')">Add</button> 
+            <button onclick="window.localStorage.removeItem('atletas');window.location.reload()">Limpar</button> 
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <h2>By Milena</h2></footer>
+        <div id="cadastro" class="modal oculta">
+            <div class="janela">
+                <h2>Adicionar atleta <button onclick="cadastro.classList.add('oculta')">X</button></h2>
+                <form>
+                    <input type ="text" name="nome" placeholder="Nome" required>
+                    <input type ="text" name="pais" placeholder="País" required>
+                    <input type ="number" name="idade" placeholder="idade" required>
+                    <input type ="text" step="0.01" name="altura" placeholder="Altura" required>
+                    <input type ="text" step="0.01" name="peso" placeholder="Peso" required>
+                    <input type ="text" name="modalidade" placeholder="Modalidade" required>
+                    <input type ="text" name="foto" placeholder="Cole o link da imagem" required>
+                    <button type = "submit">Adicionar</button>
+                </form>
+            </div>
+        </div>
+</body>
+<script src="script.js"></script>
+</html>
